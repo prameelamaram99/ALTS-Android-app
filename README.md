@@ -28,7 +28,7 @@ The app:
 ## Backend Networking — Inbound Rule Setup
 This is critical for the Android app to reach your backend.If your server is on a cloud VM (e.g., GCP, AWS, Azure)
 Open port 8000 in the VM’s firewall/security group.
-Example (GCP):
+ Example (GCP):
 > Go to VPC network → Firewall rules → Create firewall rule
 > Name: allow-alts
 > Direction: Ingress
@@ -45,3 +45,4 @@ Python backend must listen on all interfaces
 When starting your backend:
 
 **uvicorn main:app --host 0.0.0.0 --port 8000**
+
